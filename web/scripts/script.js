@@ -62,8 +62,8 @@ plot.addEventListener("click", () => {
     let x = (Math.round(event.clientX - elem.left - 6) - 200) / 40;
     let y = (Math.round(event.clientY - elem.top - 6) - 200) / -40;
     let r;
-    var radios = document.getElementsByName('R');
-    for (var i = 0, length = radios.length; i < length; i++) {
+    const radios = document.getElementsByName('R');
+    for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
             r = radios[i].value;
             break;
@@ -90,10 +90,10 @@ let btn = document.getElementById('Button');
 btn.disabled = true;
 
 function check(){
-    var foo = true;
-    var textY = document.getElementById("inputY").value;
+    let foo = true;
+    let textY = document.getElementById("inputY").value;
 
-    if (textY.length == 0){
+    if (textY.length === 0){
         foo = false;
         notification.innerHTML = "Заполним форму Y";
         btn.disabled = true;
