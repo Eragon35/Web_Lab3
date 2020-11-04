@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" style="cursor: grabbing;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="pictures/favicon.ico" type="image/x-icon"> <!--favicon.ico or icon.png-->
+    <title>Input</title>
+    <style> 
+        @import "styles/style.css";
+    </style>
+</head>
+
+<body> 
+    <div id = "labInfo" title = "Общая информация">
+        <header id = "headline">Л/р по Веб-программированию №3<br>
+            Антипин Арсентий Александрович<br>
+            Иманзаде Фахри Рашид оглы<br>
+            P3212 Вариант № 31560
+        </header>
+        <img src="pictures/Bessmertniy.jpg" class = "left"/>
+        <img src="pictures/Afanas.jpg" class="right"/>
+    </div>
+
+    <div id = "description" title = "Задание" >
+        
+    <!-- <img src="plot1.png" alt="график функции" class ="image" align = "center" title="График"/> -->
+        <canvas width="400" height="400" id="image"></canvas>
+        
+    </div>
+    
+    <div>
+        <form name = "myform" action="results.html" method="POST" title = "Таблица ввода значений">  
+            <p>Выберите X</p>
+            <input type="range" name = "X" min="-2" max="2" step="1">
+            <p>Введите Y</p>
+            <input type = "text" id = "inputY" name = "Y" maxlength="6">
+            <p>Выберите R</p>   
+            <br>    
+            <input name="R" type="radio" value="1" onclick="draw(1);"> 1   
+            <input name="R" type="radio" value="2" onclick="draw(2);"> 2
+            <input name="R" type="radio" value="3" checked onclick="draw(3);"> 3
+            <input name="R" type="radio" value="4" onclick="draw(4);"> 4
+            <input name="R" type="radio" value="5" onclick="draw(5);"> 5
+            <br>               
+            <input type = "submit"  id = "Button" value = "Поднять сервер и проверить точку"> <!-- Скрытое поля для хранения R-->           
+            <p id = "answer" name = "notification" align = "center"></p> <!-- output error-->
+        </form>        
+    </div>
+    <script src="scripts/script.js"></script>
+    <script> draw(3); </script>
+</body>
+</html>
