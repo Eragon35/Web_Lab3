@@ -31,23 +31,53 @@
     
     <div>
         <form name = "myform" action="" method="POST" title = "Таблица ввода значений">
-            <p>Выберите X</p>
+            <p class="form-heading">Выберите X</p>
             <input type="range" name = "X" min="-2" max="2" step="1">
-            <p>Введите Y</p>
-            <input type = "text" id = "inputY" name = "Y" maxlength="6">
-            <p>Выберите R</p>   
+            <p class="form-heading">Введите Y</p>
+            <input class="form-input" type = "text" id = "inputY" name = "Y" maxlength="6">
+            <p class="form-heading">Выберите R</p>   
             <br>    
-            <input name="R" type="radio" value="1" onclick="draw(1);"> 1   
+            <!-- <input name="R" type="radio" value="1" onclick="draw(1);"> 1   
             <input name="R" type="radio" value="2" onclick="draw(2);"> 2
             <input name="R" type="radio" value="3" checked onclick="draw(3);"> 3
             <input name="R" type="radio" value="4" onclick="draw(4);"> 4
-            <input name="R" type="radio" value="5" onclick="draw(5);"> 5
+            <input name="R" type="radio" value="5" onclick="draw(5);"> 5 -->
+            <div class="radio-button_wrapper">    
+                <div class="radio">
+                     <input type="radio" name="R" value = "1" id="radio-1" onclick="draw(1);"/>
+                     <label for="radio-1"></label>
+                     <span>1</span>
+                 </div>
+         
+                 <div class="radio">
+                     <input type="radio" name="R" value = "2" id="radio-2" onclick="draw(2);"/>
+                     <label for="radio-2"></label>
+                     <span>2</span>
+                 </div>
+         
+                 <div class="radio">
+                     <input type="radio"name="R" value = "3" id="radio-3" onclick="draw(3);"/>
+                     <label for="radio-3"></label>
+                     <span>3</span>
+                 </div>
+                     <div class="radio">
+                     <input type="radio" name="R" value = "4" id="radio-4"onclick="draw(4);"/>
+                     <label for="radio-4"></label>
+                     <span>4</span>
+                 </div>
+                     <div class="radio">
+                     <input type="radio"  name="R" value = "5" id="radio-5" onclick="draw(5);"/>
+                     <label for="radio-5"></label>
+                     <span>5</span>
+                 </div>
+            </div>
             <br>               
             <input type = "submit"  id = "Button" value = "Поднять сервер и проверить точку"> <!-- Скрытое поля для хранения R-->           
             <p id = "answer" name = "notification" align = "center"></p> <!-- output error-->
         </form>        
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/canvas.js"></script>
     <script> draw(3); </script>
 </body>
 </html>
