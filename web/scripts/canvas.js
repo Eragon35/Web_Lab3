@@ -7,14 +7,14 @@ function draw(parameter){ //drawing grid and figure
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = 'rgb(35, 184, 253)'; //area
-        ctx.fillRect(200-parameter*40, 200, parameter*40, parameter * 20); //left rectangle
+        ctx.fillRect(200, 200, parameter * 20, parameter * 40); //rectangle
         ctx.fill();
-        ctx.moveTo(200,200 + parameter * 20); // triangle
-        ctx.lineTo(200 + parameter * 20,200);
+        ctx.moveTo(200 - parameter * 20, 200); // triangle
+        ctx.lineTo(200, 200 + parameter * 20);
         ctx.lineTo(200,200);
         ctx.fill();
         ctx.lineTo(200, 200 - parameter * 40); // quarter of circle
-        ctx.arc(200,200, parameter * 40, -Math.PI/2, 0, false);
+        ctx.arc(200,200, parameter * 40, -Math.PI/2, Math.PI, true);
         ctx.lineTo(200,200);
         ctx.fill();
 
