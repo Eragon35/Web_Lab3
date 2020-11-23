@@ -1,7 +1,7 @@
-<!--<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"-->
-<!--              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-<!--              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee-->
-<!--    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">-->
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
 <!--    <navigation-rule>-->
 <!--        <from-view-id>/views/index.xhtml</from-view-id>-->
@@ -53,4 +53,4 @@
 <!--        <managed-bean-class>lab3.model.PointDaoImpl</managed-bean-class>-->
 <!--        <managed-bean-scope>application</managed-bean-scope>-->
 <!--    </managed-bean>-->
-<!--</faces-config>-->
+</faces-config>
