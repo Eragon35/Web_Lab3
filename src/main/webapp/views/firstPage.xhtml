@@ -18,9 +18,13 @@
 </h:head>
 
 <h:body>
-    <h:panelGroup layout="block" styleClass="wrapper">
+    <h:panelGroup layout="block" styleClass="main_wrapper">
         <h:panelGroup layout="block" styleClass="content">
-<!--            <ui:include src="header.xhtml"/>-->
+            <h:panelGroup layout="block" styleClass="header_content">
+                Иманзаде Фахри Рашид оглы <br/>
+                Антипин Арсентий Александрович<br/>
+                P3212
+            </h:panelGroup>
             <h:panelGroup layout="block" styleClass="main_content">
                 <h1><h:link value="Сломать лабу" outcome="to_main_page"/></h1>
                 <h:panelGroup layout="block" styleClass="content_row">
@@ -29,8 +33,8 @@
                             <p:remoteCommand name="dateUpdater" update="clock"/>
                         </h:form>
                         <h:panelGroup layout="block" id="clock" styleClass="clock_block">
-<!--                            <p class="date_style">Дата: <h:outputText value="#{dateBean.currentDate}"/></p>-->
-<!--                            <p class="date_style">Время: <h:outputText value="#{dateBean.currentTime}"/></p>-->
+                            <p class="date_style">Дата: <h:outputText value="#{dateBean.currentDate}"/></p>
+                            <p class="date_style">Время: <h:outputText value="#{dateBean.currentTime}"/></p>
                         </h:panelGroup>
                     </h:panelGroup>
                 </h:panelGroup>
@@ -43,6 +47,6 @@
             </h:panelGroup>
         </footer>
     </h:panelGroup>
-<!--    <h:outputScript library="js" name="updateDate.js"/>-->
+    <h:outputScript library="scripts" name="updater.js"/>
 </h:body>
 </html>

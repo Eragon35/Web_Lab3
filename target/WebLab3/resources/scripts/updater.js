@@ -1,0 +1,1 @@
+setInterval(() => window["dateUpdater"](), 7000);

@@ -3,33 +3,33 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-<!--    <navigation-rule>-->
-<!--        <from-view-id>/views/index.xhtml</from-view-id>-->
-<!--        <navigation-case>-->
-<!--            <from-outcome>to_main_page</from-outcome>-->
-<!--            <to-view-id>/views/main_page.xhtml</to-view-id>-->
-<!--        </navigation-case>-->
-<!--    </navigation-rule>-->
-<!--    <navigation-rule>-->
-<!--        <from-view-id>/views/main_page.xhtml</from-view-id>-->
-<!--        <navigation-case>-->
-<!--            <from-outcome>to_start_page</from-outcome>-->
-<!--            <to-view-id>/views/index.xhtml</to-view-id>-->
-<!--        </navigation-case>-->
-<!--    </navigation-rule>-->
+    <navigation-rule>
+        <from-view-id>/views/mainPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>to_main_page</from-outcome>
+            <to-view-id>/views/firstPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/views/firstPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>to_first_page</from-outcome>
+            <to-view-id>/views/mainPage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
-<!--    <managed-bean>-->
-<!--        <managed-bean-name>dateBean</managed-bean-name>-->
-<!--        <managed-bean-class>lab3.beans.DateBean</managed-bean-class>-->
-<!--        <managed-bean-scope>request</managed-bean-scope>-->
-<!--    </managed-bean>-->
+    <managed-bean>
+        <managed-bean-name>dateBean</managed-bean-name>
+        <managed-bean-class>beans.DateBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
 <!--    <managed-bean>-->
 <!--        <managed-bean-name>pointBean</managed-bean-name>-->
-<!--        <managed-bean-class>lab3.beans.PointBean</managed-bean-class>-->
+<!--        <managed-bean-class>lab3.lab3.beans.PointBean</managed-bean-class>-->
 <!--        <managed-bean-scope>session</managed-bean-scope>-->
 <!--        <managed-property>-->
 <!--            <property-name>points</property-name>-->
-<!--            <property-class>lab3.beans.PointsBean</property-class>-->
+<!--            <property-class>lab3.lab3.beans.PointsBean</property-class>-->
 <!--            <value>#{pointsBean}</value>-->
 <!--        </managed-property>-->
 <!--        <managed-property>-->
@@ -40,7 +40,7 @@
 <!--    </managed-bean>-->
 <!--    <managed-bean>-->
 <!--        <managed-bean-name>pointsBean</managed-bean-name>-->
-<!--        <managed-bean-class>lab3.beans.PointsBean</managed-bean-class>-->
+<!--        <managed-bean-class>lab3.lab3.beans.PointsBean</managed-bean-class>-->
 <!--        <managed-bean-scope>session</managed-bean-scope>-->
 <!--        <managed-property>-->
 <!--            <property-name>pointDao</property-name>-->
