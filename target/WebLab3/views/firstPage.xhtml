@@ -14,7 +14,7 @@
         <h:outputScript library="primefaces" name="core.js"/>
         <h:outputScript library="primefaces" name="components.js"/>
     </f:facet>
-<!--    <h:outputStylesheet library="css" name=""/>-->
+    <h:outputStylesheet library="styles" name="firstPage.css"/>
 </h:head>
 
 <h:body>
@@ -28,7 +28,7 @@
             <h:panelGroup layout="block" styleClass="main_content">
                 <h1><h:link value="Сломать лабу" outcome="to_main_page"/></h1>
                 <h:panelGroup layout="block" styleClass="content_row">
-                    <h:panelGroup layout="block" styleClass="column">
+                    <h:panelGroup layout="block" styleClass="date_wrapper">
                         <h:form>
                             <p:remoteCommand name="dateUpdater" update="clock"/>
                         </h:form>
