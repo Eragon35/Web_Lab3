@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -14,35 +13,35 @@
         <h:outputScript library="primefaces" name="core.js"/>
         <h:outputScript library="primefaces" name="components.js"/>
     </f:facet>
-    <h:outputStylesheet library="css" name="firstPage.css"/>
+    <h:outputStylesheet library="styles" name="firstPage.css"/>
 </h:head>
 
 <h:body>
-    <h:panelGroup layout="block" styleClass="wrapper">
+    <h:panelGroup layout="block" styleClass="main_wrapper">
         <h:panelGroup layout="block" styleClass="content">
-<!--            <ui:include src="header.xhtml"/>-->
+            <header>
+                <h:panelGroup layout="block" styleClass="header_content">
+                    Иманзаде Фахри Рашид оглы <br/>
+                    Антипин Арсентий Александрович<br/>
+                                P3212
+                </h:panelGroup>
+            </header>
             <h:panelGroup layout="block" styleClass="main_content">
-                <h1><h:link value="Сломать лабу" outcome="to_main_page"/></h1>
+                <h1><h:link value="Поломай меня" outcome="to_main_page"/></h1>
                 <h:panelGroup layout="block" styleClass="content_row">
-                    <h:panelGroup layout="block" styleClass="column">
+                    <h:panelGroup layout="block" styleClass="date_wrapper">
                         <h:form>
                             <p:remoteCommand name="dateUpdater" update="clock"/>
                         </h:form>
                         <h:panelGroup layout="block" id="clock" styleClass="clock_block">
-<!--                            <p class="date_style">Дата: <h:outputText value="#{dateBean.currentDate}"/></p>-->
-<!--                            <p class="date_style">Время: <h:outputText value="#{dateBean.currentTime}"/></p>-->
+                            <p class="date_style">Дата: <h:outputText value="#{dateBean.currentDate}"/></p>
+                            <p class="date_style">Время: <h:outputText value="#{dateBean.currentTime}"/></p>
                         </h:panelGroup>
                     </h:panelGroup>
                 </h:panelGroup>
             </h:panelGroup>
         </h:panelGroup>
-        <footer>
-            <h:panelGroup layout="block" styleClass="footer_text">
-                Санкт-Петербург<br/>
-                2020 год
-            </h:panelGroup>
-        </footer>
     </h:panelGroup>
-<!--    <h:outputScript library="js" name="updateDate.js"/>-->
+    <h:outputScript library="scripts" name="updater.js"/>
 </h:body>
 </html>
