@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, world"/>
-</f:view>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Lab Three</title>
+    <f:facet name="first">
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+        <h:outputScript library="primefaces" name="jquery/jquery-plugins.js"/>
+        <h:outputScript library="primefaces" name="core.js"/>
+        <h:outputScript library="primefaces" name="components.js"/>
+    </f:facet>
+    <h:outputStylesheet library="styles" name="firstPage.css"/>
+</h:head>
+
+<h:body>
+    <h:panelGroup layout="block" styleClass="main_wrapper">
+        <h:panelGroup layout="block" styleClass="content">
+            <header>
+                <h:panelGroup layout="block" styleClass="header_content">
+                    Иманзаде Фахри Рашид оглы <br/>
+                    Антипин Арсентий Александрович<br/>
+                    P3212
+                </h:panelGroup>
+            </header>
+            <h:panelGroup layout="block" styleClass="main_content">
+                <h1><h:link value="Поломай меня" outcome="to_main_page"/></h1>
+                <h:panelGroup layout="block" styleClass="content_row">
+                    <h:panelGroup layout="block" styleClass="date_wrapper">
+                        <h:form>
+                            <p:remoteCommand name="dateUpdater" update="clock"/>
+                        </h:form>
+                        <h:panelGroup layout="block" id="clock" styleClass="clock_block">
+                            <p class="date_style">Дата: <h:outputText value="#{dateBean.currentDate}"/></p>
+                            <p class="date_style">Время: <h:outputText value="#{dateBean.currentTime}"/></p>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+    </h:panelGroup>
+    <h:outputScript library="scripts" name="updater.js"/>
+</h:body>
 </html>

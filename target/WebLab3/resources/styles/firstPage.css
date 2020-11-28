@@ -17,13 +17,14 @@ body {
     line-height: 1;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 14px;
-    background: #330570;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
 
 a {
     color: #FFC373;
     cursor: pointer;
     text-decoration: none;
+    font-size: 48px;
 }
 
 a:hover {
@@ -37,7 +38,6 @@ a:hover {
 .clock_block {
     padding: 40px 0;
 }
-
 .data_style {
     font-size: 24px;
     font-weight: 600;
@@ -58,7 +58,31 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
+.date_wrapper {
+    display: flex;
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    color: deepskyblue;
+    font-size: 27px;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    border: 2px solid deepskyblue;
+    border-radius: 10px;
+    text-align: center;
+}
 
+/*.data_style {*/
+/*    font-size: 24px;*/
+/*    font-weight: 600;*/
+/*    color: #FF9200;*/
+/*    margin: 10px 0;*/
+/*    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);*/
+/*    font-family: "Trebuchet MS", sans-serif;*/
+/*}*/
 a {
     color: #98deff;
     text-decoration: none;
@@ -77,86 +101,23 @@ h1 {
     margin: 30px 0 60px 0;
 }
 
-h1:after {
-    content: '';
-    position: absolute;
-    left: 35%;
-    bottom: 0;
-    width: 30%;
-    height: 3px;
-    background-color: #530FAD;
-    margin-bottom: -30px;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex: 0 0 auto;
-}
-
-header {
+.header_content {
     font-family: monospace;
     padding: 10px 20px;
     color: #FFFFFF;
-    background-color: #8243D6;
-    font-size: 18px;
+    background-color: #35afa9;
+    font-size: 29px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 1100px;
-}
-
-header .column {
-    width: 33.333%;
-    max-width: 700px;
-    flex-shrink: 0;
-    min-width: 350px;
-}
-
-.logos_block {
-    display: flex;
-
-}
-
-header .itmo_block {
-    flex: 1 1 auto;
-    padding: 15px 0 5px 15px;
-    width: calc(33% - 130px);
-}
-
-header .main_title {
-    max-width: 1000px;
-    margin: 10px;
-    color: #FF9200;
-    padding: 30px 0;
-    background-color: #330570;
-    border: 2px solid #4F2982;
-    border-radius: 60px 0;
-    box-shadow: 5px 5px 3px #996AD6, -8px -8px 8px #A65F00;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7);
-    text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-}
-
-header .error_title {
-    color: #330570;
-    background-color: #E40045;
-    border-color: #94002D;
-    box-shadow: 5px 5px 3px #94002D, -8px -8px 8px #E40045;
-}
-
-header .made_by {
-    text-align: right;
 }
 
 .main_content {
@@ -186,36 +147,29 @@ header .made_by {
     padding: 40px 0;
 }
 
-.clock_block .date_style, .ui-clock {
-    font-size: 24px;
-    font-weight: 600;
-    color: #FF9200;
-    margin: 10px 0;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
-    font-family: "Trebuchet MS", sans-serif;
-!important;
-}
+/*.clock_block .date_style, .ui-clock {*/
+/*    font-size: 24px;*/
+/*    font-weight: 600;*/
+/*    color: #FF9200;*/
+/*    margin: 10px 0;*/
+/*    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);*/
+/*    font-family: "Trebuchet MS", sans-serif;*/
+/*!important;*/
+/*}*/
 
-.ui-clock {
-    background: #530FAD;
-!important;
-    border: none;
-!important;
-    padding: 0;
-    text-align: left;
+/*.ui-clock {*/
+/*    background: #530FAD;*/
+/*!important;*/
+/*    border: none;*/
+/*!important;*/
+/*    padding: 0;*/
+/*    text-align: left;*/
 
-}
+/*}*/
 
-footer {
-    padding: 5px;
-    width: 100%;
-    background-color: #8243D6;
-    color: #FFFFFF;
-    min-width: 1100px;
-}
-
-footer .footer_text {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
+/*font-size: 24px;*/
+/*font-weight: 600;*/
+/*color: #00fffffa;*/
+/*margin: 10px 0;*/
+/*text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);*/
+/*font-family: "Trebuchet MS", sans-serif;*/

@@ -1,7 +1,7 @@
 <faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_..">
 
     <navigation-rule>
         <from-view-id>/views/firstPage.xhtml</from-view-id>
@@ -23,6 +23,7 @@
         <managed-bean-class>beans.DateBean</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+</faces-config>
 <!--    <managed-bean>-->
 <!--        <managed-bean-name>pointBean</managed-bean-name>-->
 <!--        <managed-bean-class>lab3.lab3.beans.PointBean</managed-bean-class>-->
@@ -53,4 +54,3 @@
 <!--        <managed-bean-class>lab3.model.PointDaoImpl</managed-bean-class>-->
 <!--        <managed-bean-scope>application</managed-bean-scope>-->
 <!--    </managed-bean>-->
-</faces-config>
