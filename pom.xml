@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lab3</groupId>
-    <artifactId>Web_Lab3</artifactId>
+    <artifactId>WebLab3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Web_Lab3</name>
+    <name>WebLab3</name>
     <packaging>war</packaging>
     <repositories>
         <repository>
@@ -82,7 +82,7 @@
                 <directory>src/main/resources</directory>
             </resource>
         </resources>
-        <finalName>Web_Lab3</finalName>
+        <finalName>WebLab3</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

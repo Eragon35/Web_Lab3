@@ -28,7 +28,7 @@ public class Point {
     public void checkArea(){
         income = false;
         if (y > 0){
-            if (x <=0){
+            if (x <= 0){
                 if (x * x + y * y <= r * r) income = true;
             }
         }
