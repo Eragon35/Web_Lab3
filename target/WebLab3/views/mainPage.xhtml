@@ -4,15 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
       xmlns:ace="http://www.icefaces.org/icefaces/components"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
 <h:head>
     <title>Таблица</title>
     <h:outputStylesheet library="styles" name="mainPage.css"/>
 
 </h:head>
 <h:body>
+    <h:panelGroup id="description">
+        <canvas width="400px" height="400px" id="image" />
+    </h:panelGroup>
     <h:form id="newTableForm">
         <!-- TODO: add validator to inputText andthink about converters -->
         <div>
@@ -64,7 +67,7 @@
             </h:column>
 
             <h:column>
-                <f:facet name="header">income</f:facet>
+                <f:facet name="header" id="result">income</f:facet>
                 #{table.income}
             </h:column>
         </h:dataTable>
@@ -72,5 +75,6 @@
     <f:view>
         <h1><h:link value="Back" outcome="to_first_page"/></h1>
     </f:view>
+    <h:outputScript library="scripts" name="canvas.js"/>
 </h:body>
 </html>

@@ -14,7 +14,7 @@ html,
 body {
     height: 100vh;
     width: 100%;
-    line-height: 1;
+    line-height: 1.1;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 14px;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -25,6 +25,9 @@ a {
     cursor: pointer;
     text-decoration: none;
     font-size: 48px;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 a:hover {
@@ -52,9 +55,27 @@ a:hover {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
     padding: 15px 30px;
     border: 2px solid deepskyblue;
-    border-radius: 10px;
+    border-radius: 14px;
     text-align: center;
+    background-color: #10606b;
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 2s;
 }
+
+.date_wrapper:hover {
+    transform: scale(1.09) rotate(-10deg) skewX(10deg);
+    color: #e8f70e;
+    background: none;
+    opacity: 0.89;
+    border: none;
+    -webkit-box-shadow: 1px 0px 4px 8px whitesmoke;
+}
+
+#headline{
+    transition: transform .35s;
+}
+/* rgb(234 239 237 / 88%); */
 
 /*.data_style {*/
 /*    font-size: 24px;*/
@@ -91,15 +112,18 @@ h1 {
 
 .header_content {
     font-family: monospace;
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: #FFFFFF;
     background-color: #35afa9;
-    font-size: 29px;
-    width: 100%;
+    font-size: 25px;
+    width: 22%;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 1100px;
+    box-shadow: 5px 5px 5px;
+    transform: rotate(-4deg);
+    margin: 15px;
+    cursor: pointer;
 }
 
 .main_content {

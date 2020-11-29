@@ -1,5 +1,6 @@
 function draw(parameter){ //drawing grid and figure
     let canvas = document.getElementById('image');
+    let table = document.getElementById('#result');
     if (canvas.getContext){
         let ctx = canvas.getContext('2d');
 
@@ -37,6 +38,8 @@ function draw(parameter){ //drawing grid and figure
         ctx.moveTo(200,0);
         ctx.lineTo(200,400);
         ctx.stroke();
+
+        table.innerHTML = 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
     }
 }
 
@@ -53,13 +56,15 @@ plot.addEventListener("click", () => {
             break;
         }
     }
-    if (confirm("Do you wanna check\n" + x + " " + y + " " + r)){ // send post request
-        let xhr = new XMLHttpRequest();
-        let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
-        xhr.open("POST", '/web_lab2_Web_exploded/control');
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.send(body);
-        if (xhr.status !== 200 && xhr.readyState === XMLHttpRequest.DONE) alert("shit happened, you request is failed");
-        else window.location.replace("/web_lab2_Web_exploded/result.jsp");
-    }
+
+    confirm("Do you wanna check\n" + x + " " + y + " " + r)
+    // if (){ // send post request
+    //     let xhr = new XMLHttpRequest();
+    //     let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
+    //     xhr.open("POST", '/web_lab2_Web_exploded/control');
+    //     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //     xhr.send(body);
+    //     if (xhr.status !== 200 && xhr.readyState === XMLHttpRequest.DONE) alert("shit happened, you request is failed");
+    //     else window.location.replace("/web_lab2_Web_exploded/result.jsp");
+    // }
 });
