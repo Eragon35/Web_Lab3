@@ -1,6 +1,6 @@
 function draw(parameter){ //drawing grid and figure
     let canvas = document.getElementById('image');
-    let table = document.getElementById('#result');
+    let table = document.getElementById('#table');
     if (canvas.getContext){
         let ctx = canvas.getContext('2d');
 
@@ -39,7 +39,16 @@ function draw(parameter){ //drawing grid and figure
         ctx.lineTo(200,400);
         ctx.stroke();
 
-        table.innerHTML = 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
+        for (let r = 1, n = table.rows.length; r < n; r++) {
+            let x = table.rows[r].cells[0].innerHTML;
+            let y = table.rows[r].cells[1].innerHTML;
+            let result = table.rows[r].cells[3].innerHTML;
+            result === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
+            ctx.beginPath();
+            ctx.arc(200 + 40 * x, 200 - 40 * y, 6, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        table.innerHTML === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
     }
 }
 
