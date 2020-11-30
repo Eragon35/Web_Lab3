@@ -17,19 +17,27 @@ import java.util.List;
 public class TableBean implements Serializable {
     private Point newPoint = new Point();
     private List<Point> table = new ArrayList<>();
+//    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
+//    EntityManager entityManager = entityManagerFactory.createEntityManager();
+//    private List<Point> table = entityManager.createNativeQuery("select * from s207704.point").getResultList();
 
     public void addPoint(){
         newPoint.checkArea();
         table.add(newPoint);
-        try {
-            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
-            EntityManager entityManager = entityManagerFactory.createEntityManager();
-            entityManager.getTransaction().begin();
-            entityManager.persist(newPoint);
-            entityManager.getTransaction().commit();
-            entityManagerFactory.close();
-        } catch (Exception ignore) {}
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(newPoint);
+        entityManager.getTransaction().commit();
+        entityManagerFactory.close();
         newPoint = new Point();
+    }
+
+    public void upload(){
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        table = entityManager.createNativeQuery("select * from s207704.point").getResultList();
+
     }
 
     public Point getNewPoint() { return newPoint; }
