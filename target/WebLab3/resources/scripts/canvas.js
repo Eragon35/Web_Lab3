@@ -67,7 +67,9 @@ plot.addEventListener("click", () => {
     }
 
     confirm("Do you wanna check\n" + x + " " + y + " " + r)
-    // if (){ // send post request
+    document.getElementById("newTableForm:inputX").value = x;
+    document.getElementById("newTableForm:inputY").value = y;
+    document.getElementById("newTableForm:Button").click();
     //     let xhr = new XMLHttpRequest();
     //     let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
     //     xhr.open("POST", '/web_lab2_Web_exploded/control');
