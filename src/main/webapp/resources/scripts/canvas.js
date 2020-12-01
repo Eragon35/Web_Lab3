@@ -1,6 +1,6 @@
 function draw(parameter){ //drawing grid and figure
     let canvas = document.getElementById('image');
-    let table = document.getElementById('#table');
+    let table = document.getElementById('resultTable');
     if (canvas.getContext){
         let ctx = canvas.getContext('2d');
 

@@ -17,41 +17,38 @@
         <canvas width="400px" height="400px" id="image" />
     </h:panelGroup>
     <h:form id="newTableForm">
-        <!-- TODO: add validator to inputText andthink about converters -->
         <div>
             <h:outputLabel for="inputX" value="input X"/>
-            <h:inputText id="inputX" value="#{tableBean.newPoint.x}"
-
-                         maxlength="6">
-                <f:validateDoubleRange minimum="-3" maximum="5"/>
-            </h:inputText>
-
+            <!-- TODO: show current value & send value form slider-->
+<!--                     <ace:sliderEntry id="inputX"  axis = "x" clickableRail = "true"-->
+<!--                                      min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="true"/>-->
+            <h:inputHidden value="#{tableBean.newPoint.y}"/>
+            <h:inputText id="inputX" value="#{tableBean.newPoint.x}" maxlength="6"/>
         </div>
         <div>
             <h:outputLabel for="inputY" value="input Y"/>
-            <!-- TODO: show current value & send value form slider-->
+            <!-- TODO: add validator to inputText andthink about converters -->
             <h:inputText id="inputY" value="#{tableBean.newPoint.y}"/>
-            <!--         <ace:sliderEntry id="inputY" value="#{tableBean.newPoint.y}" axis = "x" clickableRail = "true"-->
-            <!--                          min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="true"/>-->
+<!--            <f:validateDoubleRange minimum="-3" maximum="5"/>-->
         </div>
         <div>
             <h:outputLabel for="inputR" value="input R"/>
             <!--TODO: choose 0 as default selected and redraw canvas onclick -->
             <h:selectOneRadio id="inputR" value="#{tableBean.newPoint.r}">
-                <f:selectItem itemValue = "0" itemLabel = "0" />
-                <f:selectItem itemValue = "1" itemLabel = "1" />
-                <f:selectItem itemValue = "2" itemLabel = "2" />
-                <f:selectItem itemValue = "3" itemLabel = "3" />
-                <f:selectItem itemValue = "4" itemLabel = "4" />
-                <f:selectItem itemValue = "5" itemLabel = "5" />
+                <f:selectItem itemValue = "0" onclick="draw(0)" itemLabel = "0" />
+                <f:selectItem itemValue = "1" onclick="draw(1)" itemLabel = "1" />
+                <f:selectItem itemValue = "2" onclick="draw(2)" itemLabel = "2" />
+                <f:selectItem itemValue = "3" onclick="draw(3)" itemLabel = "3" />
+                <f:selectItem itemValue = "4" onclick="draw(4)" itemLabel = "4" />
+                <f:selectItem itemValue = "5" onclick="draw(5)" itemLabel = "5" />
             </h:selectOneRadio>
         </div>
-        <h:commandButton value="Проверить точку" action="#{tableBean.addPoint()}">
-            <f:ajax execute="newTableForm" render="Table" />
+        <h:commandButton value="Проверить точку" id = "Button" action="#{tableBean.addPoint()}">
+            <f:ajax execute="newTableForm" render="resultTable" />
         </h:commandButton>
     </h:form>
-    <h:panelGroup id="Table">
-        <h:dataTable value="#{tableBean.table}" var="table">
+    <h:panelGroup >
+        <h:dataTable value="#{tableBean.table}" var="table" id="resultTable">
             <h:column>
                 <f:facet name="header">X</f:facet>
                 #{table.x}
@@ -77,5 +74,6 @@
         <h1><h:link value="Back" outcome="to_first_page"/></h1>
     </f:view>
     <h:outputScript library="scripts" name="canvas.js"/>
+    <h:outputScript library="scripts" name="script.js"/>
 </h:body>
 </html>

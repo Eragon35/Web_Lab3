@@ -45,12 +45,6 @@
             <artifactId>icefaces</artifactId>
             <version>4.3.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icefaces/icefaces-ace -->
-        <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefaces-ace</artifactId>
-            <version>4.3.0</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.primefaces/primefaces-->
         <dependency>
             <groupId>org.primefaces</groupId>
@@ -69,6 +63,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.4.10.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces-ace</artifactId>
+            <version>4.3.0</version>
         </dependency>
     </dependencies>
     <build>
