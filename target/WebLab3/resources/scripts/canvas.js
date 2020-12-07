@@ -42,13 +42,16 @@ function draw(parameter){ //drawing grid and figure
         for (let r = 1, n = table.rows.length; r < n; r++) {
             let x = table.rows[r].cells[0].innerHTML;
             let y = table.rows[r].cells[1].innerHTML;
-            let result = table.rows[r].cells[3].innerHTML;
-            result === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
-            ctx.beginPath();
-            ctx.arc(200 + 40 * x, 200 - 40 * y, 6, 0, 2 * Math.PI);
-            ctx.fill();
+            let result = table.rows[r].cells[3].innerText;
+            if (result !== "")
+            {
+                result === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
+                ctx.beginPath();
+                ctx.arc(200 + 40 * x, 200 - 40 * y, 6, 0, 2 * Math.PI);
+                ctx.fill();
+            }
         }
-        table.innerHTML === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
+        // table.innerHTML === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
     }
 }
 
@@ -57,19 +60,22 @@ plot.addEventListener("click", () => {
     let elem = plot.getBoundingClientRect();
     let x = (Math.round(event.clientX - elem.left - 6) - 200) / 40;
     let y = (Math.round(event.clientY - elem.top - 6) - 200) / -40;
-    let r;
-    const radios = document.getElementsByName('R');
-    for (let i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-            r = radios[i].value;
-            break;
-        }
-    }
+    let r = document.querySelector('input[name="newTableForm:inputR"]:checked').value;
+    const radios = document.getElementsByName('newTableForm:inputR');
+    // for (let i = 0, length = radios.length; i < length; i++) {
+    //     if (radios[i].checked) {
+    //         r = radios[i].value;
+    //         break;
+    //     }
+    // }
 
     confirm("Do you wanna check\n" + x + " " + y + " " + r)
     document.getElementById("newTableForm:inputX").value = x;
     document.getElementById("newTableForm:inputY").value = y;
     document.getElementById("newTableForm:Button").click();
+    document.getElementById("newTableForm:inputX").value = "";
+    document.getElementById("newTableForm:inputY").value = "";
+
     //     let xhr = new XMLHttpRequest();
     //     let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
     //     xhr.open("POST", '/web_lab2_Web_exploded/control');

@@ -46,7 +46,7 @@
             </h:selectOneRadio>
         </div>
         <h:commandButton value="Проверить точку" id = "Button" action="#{tableBean.addPoint()}">
-            <f:ajax execute="newTableForm" render="resultTable" />
+            <f:ajax execute="newTableForm" render="resultTable"/>
         </h:commandButton>
     </h:form>
     <h:panelGroup >
@@ -77,9 +77,12 @@
     </f:view>
     <h:outputScript library="scripts" name="canvas.js"/>
 <!--    <h:outputScript library="scripts" name="script.js"/>-->
-    <script type="text/javascript" >
+    <script type="text/javascript">
         document.getElementsByName('newTableForm:inputR')[2].checked = true;
-        draw(3);
+        setInterval(() => {
+            let parameter = document.querySelector('input[name="newTableForm:inputR"]:checked').value;
+            draw(parameter);
+        },100);
     </script>
 </h:body>
 </html>
