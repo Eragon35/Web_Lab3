@@ -27,3 +27,8 @@ function check(){
     }
 }
 setInterval(check,100);
+
+function onStart(){
+        draw(3);
+        document.getElementsByName('R')[3].checked = true;
+}

@@ -58,7 +58,7 @@ plot.addEventListener("click", () => {
     let x = (Math.round(event.clientX - elem.left - 6) - 200) / 40;
     let y = (Math.round(event.clientY - elem.top - 6) - 200) / -40;
     let r;
-    const radios = document.getElementsByName('R');
+    const radios = document.getElementsByName('newTableForm:inputR');
     for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
             r = radios[i].value;
@@ -70,6 +70,9 @@ plot.addEventListener("click", () => {
     document.getElementById("newTableForm:inputX").value = x;
     document.getElementById("newTableForm:inputY").value = y;
     document.getElementById("newTableForm:Button").click();
+    document.getElementById("newTableForm:inputX").value = "";
+    document.getElementById("newTableForm:inputY").value = "";
+
     //     let xhr = new XMLHttpRequest();
     //     let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
     //     xhr.open("POST", '/web_lab2_Web_exploded/control');
