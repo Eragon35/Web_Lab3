@@ -39,19 +39,17 @@ function draw(parameter){ //drawing grid and figure
         ctx.lineTo(200,400);
         ctx.stroke();
 
-        for (let r = 1, n = table.rows.length; r < n; r++) {
+        for (let r = 1, n = table.rows.length; r < n; r++) { //dots
             let x = table.rows[r].cells[0].innerHTML;
             let y = table.rows[r].cells[1].innerHTML;
             let result = table.rows[r].cells[3].innerText;
-            if (result !== "")
-            {
+            if (result !== "") {
                 result === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
                 ctx.beginPath();
                 ctx.arc(200 + 40 * x, 200 - 40 * y, 6, 0, 2 * Math.PI);
                 ctx.fill();
             }
         }
-        // table.innerHTML === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
     }
 }
 
@@ -61,13 +59,6 @@ plot.addEventListener("click", () => {
     let x = (Math.round(event.clientX - elem.left - 6) - 200) / 40;
     let y = (Math.round(event.clientY - elem.top - 6) - 200) / -40;
     let r = document.querySelector('input[name="newTableForm:inputR"]:checked').value;
-    const radios = document.getElementsByName('newTableForm:inputR');
-    // for (let i = 0, length = radios.length; i < length; i++) {
-    //     if (radios[i].checked) {
-    //         r = radios[i].value;
-    //         break;
-    //     }
-    // }
 
     confirm("Do you wanna check\n" + x + " " + y + " " + r)
     document.getElementById("newTableForm:inputX").value = x;
@@ -83,5 +74,4 @@ plot.addEventListener("click", () => {
     //     xhr.send(body);
     //     if (xhr.status !== 200 && xhr.readyState === XMLHttpRequest.DONE) alert("shit happened, you request is failed");
     //     else window.location.replace("/web_lab2_Web_exploded/result.jsp");
-    // }
 });

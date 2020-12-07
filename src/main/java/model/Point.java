@@ -1,6 +1,5 @@
 package model;
 
-
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -21,7 +20,6 @@ public class Point {
     @Column(name = "income")
     private String  income;
 
-
     public Double getX() { return x; }
     public Double getY() { return y; }
     public Double getR() { return r; }
@@ -31,7 +29,6 @@ public class Point {
     public void setY(Double y) { this.y = y; }
     public void setR(Double r) { this.r = r; }
     public void setIncome(String income) { this.income = income; }
-
 
     public void checkArea(){
         income = "false";
