@@ -61,10 +61,9 @@ plot.addEventListener("click", () => {
     let r = document.querySelector('input[name="newTableForm:inputR"]:checked').value;
 
     confirm("Do you wanna check\n" + x + " " + y + " " + r)
-    document.getElementById("newTableForm:inputX").value = x;
+    document.getElementById("newTableForm:realInputX").value = x;
     document.getElementById("newTableForm:inputY").value = y;
     document.getElementById("newTableForm:Button").click();
-    document.getElementById("newTableForm:inputX").value = "";
     document.getElementById("newTableForm:inputY").value = "";
 
     //     let xhr = new XMLHttpRequest();

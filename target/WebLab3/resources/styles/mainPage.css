@@ -1,6 +1,6 @@
 /* Наследование и каскадирование стилей */
 body{
-    background-image: url(#{requset.contextPath}/resources/pictures/back.png);
+    background-image: url(#{request.contextPath}/resources/images/back.png);
     background-size: 20%; 
 }
 
@@ -44,7 +44,7 @@ table[id = "newTableForm:inputR"]{ /* selectOneRadio */
     margin-left: auto;
     margin-right: auto;
 }
-input[id = "newTableForm:Button"] { /* button to submit form */
+input[id = "newTableForm:Button"], #_t36{ /* button to submit form */
     font-size: 100%; 
     padding:5px 10px 5px 10px; 
     margin: 6px; 
@@ -55,13 +55,9 @@ input[id = "newTableForm:Button"] { /* button to submit form */
     border-bottom: 4px solid rgb(0, 0, 0);
     border-right: 4px solid rgb(0, 0, 0);
 }
-input[id = "newTableForm:Button"]:hover {
+input[id = "newTableForm:Button"]:hover, #_t36:hover {
     cursor: pointer; /* курсор — палец */
     box-shadow: 4px 4px crimson; 
-}
-input[id = "newTableForm:Button"]:disabled{
-    background-color: rgb(50,50,50);
-    color: gray;
 }
 
 #resultTable{ /* table with results */
@@ -77,14 +73,19 @@ input[id = "newTableForm:Button"]:disabled{
     border:2px solid #02f;
     border-collapse: collapse;
 }
-#resultTable:hover {
-    background-image: url(#{requset.contextPath}/resources/pictures/pattern.jpg);
-    opacity: 0.8;
-}
+
 #resultTable td {   /* использование селектора потомков */
     border:2px solid #02f;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    filter:sepia(100%);
+    color: black;
+}
+#_t36{
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-family: "Montserrat","Open Sans", sans-serif;
+    font-size: 16pt;
 }
