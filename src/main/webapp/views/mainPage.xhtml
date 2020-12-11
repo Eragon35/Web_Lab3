@@ -18,15 +18,15 @@
     </h:panelGroup>
     <h:form id="newTableForm">
         <div>
-            <h:outputLabel for="inputX" value="input X"/>
+            <h:outputLabel for="inputX" value="input X (-2..2)"/>
             <!-- TODO: show current value & send value form slider-->
                      <ace:sliderEntry id="inputX"  axis = "x" clickableRail = "true"
-                                      min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="true"/>
+                                      min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="false"/>
 <!--            <h:inputHidden value="#{tableBean.newPoint.y}"/>-->
 <!--            <h:inputText id="inputX" value="#{tableBean.newPoint.x}"/>-->
         </div>
         <div>
-            <h:outputLabel for="inputY" value="input Y"/>
+            <h:outputLabel for="inputY" value="input Y (-3..5) &lt;br /&gt;" escape="false"/>
             <!-- TODO: add validator to inputText andthink about converters -->
             <h:inputText id="inputY" value="#{tableBean.newPoint.y}" maxlength="6" validatorMessage="Bullshit input data">
                 <f:validator validatorId="yValidator"/>
