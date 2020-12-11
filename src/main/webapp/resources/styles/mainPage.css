@@ -31,6 +31,7 @@ body{
     border: 4px solid crimson;
     background-color: rgba(0, 34, 255, 0.8);
 }
+#newTableForm:_t8{}
 
 table[id = "newTableForm:inputR"]{ /* selectOneRadio */
     margin-left: auto;

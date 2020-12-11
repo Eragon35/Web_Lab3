@@ -2,6 +2,7 @@ package beans;
 
 import model.Point;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
 import javax.faces.bean.SessionScoped;
@@ -33,10 +34,11 @@ public class TableBean implements Serializable {
         newPoint = new Point();
     }
 
+    @PostConstruct
     public void upload(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        table = entityManager.createNativeQuery("select * from s207704.point").getResultList();
+        table = entityManager.createQuery("SELECT p from Point p", Point.class).getResultList();
 
     }
 

@@ -42,5 +42,15 @@ public class Point {
         }
         else if (y > x - r / 2) income = "true";
     }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                ", r=" + r +
+                ", income='" + income + '\'' +
+                '}';
+    }
 }
 

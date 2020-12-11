@@ -74,5 +74,4 @@ plot.addEventListener("click", () => {
     //     xhr.send(body);
     //     if (xhr.status !== 200 && xhr.readyState === XMLHttpRequest.DONE) alert("shit happened, you request is failed");
     //     else window.location.replace("/web_lab2_Web_exploded/result.jsp");
-    // }
 });

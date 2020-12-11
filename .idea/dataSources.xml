@@ -13,5 +13,15 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://pg:5432/studs</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="org.table.jpa/Hibernate" uuid="c6a42377-e223-447b-b52f-68c5d6bbe462">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Triada/Documents/IdeaProjects/JSP/Web_Lab3/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/studs</jdbc-url>
+    </data-source>
   </component>
 </project>
