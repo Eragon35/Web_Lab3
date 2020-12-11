@@ -22,8 +22,7 @@
             <!-- TODO: show current value & send value form slider-->
                      <ace:sliderEntry id="inputX"  axis = "x" clickableRail = "true"
                                       min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="false"/>
-<!--            <h:inputHidden value="#{tableBean.newPoint.y}"/>-->
-<!--            <h:inputText id="inputX" value="#{tableBean.newPoint.x}"/>-->
+            <h:inputHidden value="#{tableBean.newPoint.x}" id="realInputX"/>
         </div>
         <div>
             <h:outputLabel for="inputY" value="input Y (-3..5) &lt;br /&gt;" escape="false"/>
@@ -82,6 +81,7 @@
         setInterval(() => {
             let parameter = document.querySelector('input[name="newTableForm:inputR"]:checked').value;
             draw(parameter);
+            document.getElementById("newTableForm:realInputX").value = document.getElementById("newTableForm:inputX_hidden").value
         },100);
     </script>
 </h:body>
