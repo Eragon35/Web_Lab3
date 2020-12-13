@@ -2,6 +2,8 @@ package model;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Table(name = "s207704.point")
@@ -17,17 +19,21 @@ public class Point {
     private Double y;
     @Column(name = "r")
     private Double r;
+    @Column(name = "time")
+    private String time;
     @Column(name = "income")
     private String  income;
 
     public Double getX() { return x; }
     public Double getY() { return y; }
     public Double getR() { return r; }
+    public String getTime() { return time; }
     public String  getIncome() { return income;}
 
     public void setX(Double x) { this.x = x; }
     public void setY(Double y) { this.y = y; }
     public void setR(Double r) { this.r = r; }
+    public void setTime(String time) { this.time = time; }
     public void setIncome(String income) { this.income = income; }
 
     public void checkArea(){
@@ -49,6 +55,7 @@ public class Point {
                 "x=" + x +
                 ", y=" + y +
                 ", r=" + r +
+                ", time='" + time +
                 ", income='" + income + '\'' +
                 '}';
     }
