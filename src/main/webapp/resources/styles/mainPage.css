@@ -14,6 +14,13 @@ body{
     cursor: crosshair;
 }
 
+.error_title {
+    color: #330570;
+    background-color: #E40045;
+    border-color: #94002D;
+    box-shadow: 5px 5px 3px #94002D, -8px -8px 8px #E40045;
+}
+
 #newTableForm{   /* form */
     /*height: 130px;*/
     font-family: "Montserrat","Open Sans", sans-serif;

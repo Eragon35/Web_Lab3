@@ -19,17 +19,15 @@
     <h:form id="newTableForm">
         <div>
             <h:outputLabel for="inputX" value="input X (-2..2)"/>
-            <!-- TODO: show current value & send value form slider-->
-                     <ace:sliderEntry id="inputX"  axis = "x" clickableRail = "true"
-                                      min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="false"/>
+                    <ace:sliderEntry id="inputX"  axis = "x" clickableRail = "true"
+                                min = "-2" max = "2" stepPercent = "25" length = "250px" showLabels="false"/>
             <h:inputHidden value="#{tableBean.newPoint.x}" id="realInputX"/>
         </div>
         <div>
             <h:outputLabel for="inputY" value="input Y (-3..5) &lt;br /&gt;" escape="false"/>
-            <!-- TODO: add validator to inputText andthink about converters -->
             <h:inputText id="inputY" value="#{tableBean.newPoint.y}" maxlength="6" validatorMessage="Bullshit input data">
-                <f:validator validatorId="yValidator"/>
-                <!--            <f:validateDoubleRange minimum="-3" maximum="5"/>-->
+                <f:converter converterId="YConverter"/>
+                <f:validator validatorId="YValidator"/>
             </h:inputText>
         </div>
         <div>

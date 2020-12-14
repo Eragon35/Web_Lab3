@@ -10,7 +10,7 @@ import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 import java.util.Map;
 
-@FacesValidator("yValidator")
+@FacesValidator("YValidator")
 public class YValidator implements Validator, ClientValidator {
 
     @Override
@@ -35,6 +35,6 @@ public class YValidator implements Validator, ClientValidator {
 
     @Override
     public String getValidatorId() {
-        return "yValidator";
+        return "YValidator";
     }
 }

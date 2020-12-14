@@ -20,6 +20,13 @@ body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
 
+.error_title {
+    color: #330570;
+    background-color: #E40045;
+    border-color: #94002D;
+    box-shadow: 5px 5px 3px #94002D, -8px -8px 8px #E40045;
+}
+
 a {
     color: #FFC373;
     cursor: pointer;
