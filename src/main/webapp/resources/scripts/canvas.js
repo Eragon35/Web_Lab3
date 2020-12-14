@@ -42,7 +42,7 @@ function draw(parameter){ //drawing grid and figure
         for (let r = 1, n = table.rows.length; r < n; r++) { //dots
             let x = table.rows[r].cells[0].innerHTML;
             let y = table.rows[r].cells[1].innerHTML;
-            let result = table.rows[r].cells[3].innerText;
+            let result = table.rows[r].cells[4].innerText;
             if (result !== "") {
                 result === 'true' ? ctx.fillStyle = 'green' : ctx.fillStyle = 'red';
                 ctx.beginPath();
