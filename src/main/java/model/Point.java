@@ -33,20 +33,23 @@ public class Point {
     public void setX(Double x) { this.x = x; }
     public void setY(Double y) { this.y = y; }
     public void setR(Double r) { this.r = r; }
-    public void setTime(String time) { this.time = time; }
+    public void setTime() { time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()); }
     public void setIncome(String income) { this.income = income; }
 
     public void checkArea(){
         income = "false";
         if (y > 0){
-            if (x <=0){
+            if (x <0){
                 if (x * x + y * y <= r * r) income = "true";
             }
         }
-        else if (x > 0){
-            if ((x < r / 2) && (y > r)) income = "true";
+        else if (x >= 0){
+            if ((x < r / 2) && (y > -r)) income = "true";
         }
         else if (y > x - r / 2) income = "true";
+        if ((y <= -3) || (y >= 5)) income = "Wrong parameter Y";
+        if ((x < -2) || (x > 2)) income = "Wrong parameter X";
+        if ((r < 1) || (r > 5)) income = "Wrong parameter R";
     }
 
     @Override

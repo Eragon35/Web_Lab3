@@ -24,13 +24,16 @@ public class TableBean implements Serializable {
 
     public void addPoint(){
         newPoint.checkArea();
+        newPoint.setTime();
         table.add(newPoint);
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.persist(newPoint);
-        entityManager.getTransaction().commit();
-        entityManagerFactory.close();
+        if (newPoint.getIncome().equals("true") || newPoint.getIncome().equals("false")) {
+            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.table.jpa");
+            EntityManager entityManager = entityManagerFactory.createEntityManager();
+            entityManager.getTransaction().begin();
+            entityManager.persist(newPoint);
+            entityManager.getTransaction().commit();
+            entityManagerFactory.close();
+        }
         newPoint = new Point();
     }
 

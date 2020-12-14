@@ -64,13 +64,6 @@ plot.addEventListener("click", () => {
     document.getElementById("newTableForm:realInputX").value = x;
     document.getElementById("newTableForm:inputY").value = y;
     document.getElementById("newTableForm:Button").click();
+    document.getElementById("newTableForm:realInputX").value = document.getElementById("newTableForm:inputX_hidden").value
     document.getElementById("newTableForm:inputY").value = "";
-
-    //     let xhr = new XMLHttpRequest();
-    //     let body = 'X=' + encodeURIComponent(x) + "&Y=" + encodeURIComponent(y) + "&R=" + encodeURIComponent(r);
-    //     xhr.open("POST", '/web_lab2_Web_exploded/control');
-    //     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    //     xhr.send(body);
-    //     if (xhr.status !== 200 && xhr.readyState === XMLHttpRequest.DONE) alert("shit happened, you request is failed");
-    //     else window.location.replace("/web_lab2_Web_exploded/result.jsp");
 });

@@ -44,7 +44,7 @@ table[id = "newTableForm:inputR"]{ /* selectOneRadio */
     margin-left: auto;
     margin-right: auto;
 }
-input[id = "newTableForm:Button"], #_t36{ /* button to submit form */
+input[id = "newTableForm:Button"], #_t39{ /* button to submit form */
     font-size: 100%; 
     padding:5px 10px 5px 10px; 
     margin: 6px; 
@@ -81,7 +81,7 @@ input[id = "newTableForm:Button"]:hover, #_t36:hover {
     text-align: center;
     color: black;
 }
-#_t36{
+#_t39{
     font-weight: normal;
     margin-left: auto;
     margin-right: auto;
